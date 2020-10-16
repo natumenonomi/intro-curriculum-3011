@@ -1,9 +1,11 @@
 'use strict';
 const http = require('http');
 const server = http.createServer((req, res) => {
+  //'text/html忘れない
   res.writeHead(200, {
     'Content-Type': 'text/html; charset=utf-8'
   });
+  //'に気を付ける
   res.write('<!DOCTYPE html><html lang="ja"><body><h1>HTMLの一番大きい見出しを表示します</h1></body></html>');
   res.end();
 });
